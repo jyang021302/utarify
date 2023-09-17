@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utarify Book Rental</title>
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap css -->
+    <link rel = "stylesheet" href = "bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel = "stylesheet" href = "css/main.css">
+</head>
+<body>
+    
+    <!-- navbar -->
+    <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
+        <div class = "container">
+            <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "index.html">
+                <img src = "images/site-logo.png" alt = "site icon">
+                <span class = "text-uppercase fw-lighter ms-2">UTARIFY BOOK RENTAL</span>
+            </a>
+
+            <div class = "order-lg-2 nav-btns">
+                <button type = "button" class = "btn position-relative">
+                    <a href="cart.html" style="color: black;">
+                        <i class = "fa fa-shopping-cart"></i>
+                    </a>
+                </button>
+                <button type = "button" class = "btn position-relative">
+                    <a href="login.html" style="color: black;">
+                        <i class = "fa fa-user"></i>
+                    </a>
+                </button>
+            </div>
+
+            <button class = "navbar-toggler border-0" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navMenu">
+                <span class = "navbar-toggler-icon"></span>
+            </button>
+
+            <div class = "collapse navbar-collapse order-lg-1" id = "navMenu">
+                <ul class = "navbar-nav mx-auto text-center">
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "index.html">home</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2 border-0">
+                        <a class = "nav-link text-uppercase text-dark" href = "browse.html">Browse</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "blog.html">blogs</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <span id="userEmail" class="nav-link text-uppercase text-dark"></span>
+
+            </div>
+        </div>
+    </nav>
+    <!-- end of navbar -->
+
+    <section id="contact" class="py-5 mt-5">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Contact Us</h1>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required placeholder="e.g. Elon Musk">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required placeholder="e.g. baguette@gmail.com">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="text" minlength="10" maxlength="11" class="form-control" id="phone" name="phone" required placeholder="e.g. 0123456789">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Any enquiries?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" onclick="sendEmail()">Submit</button>
+
+                        <p id="savedInfo"></p>
+                    </form>
+
+                </div>
+                <div class="col-md-6 contact-details">
+                    <h1>Meet Us</h1>
+                    <br>
+                    <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class="me-3">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </span>
+                        <span class="fw-light">
+                            Jalan Universiti, Bandar Barat, 31900 Kampar, Perak
+                        </span>
+                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7956.809785178998!2d101.12560449357912!3d4.334836300000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cb1d573f9aabf3%3A0x28cc06c069e40dce!2sUniversiti%20Tunku%20Abdul%20Rahman%20Kampar%20Campus!5e0!3m2!1sen!2smy!4v1694689670082!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class="me-3">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span class="fw-light">
+                            <a href="mailto: utarify_books@gmail.com?subject=Enquiry">utarify_books@gmail.com</a>
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class="me-3">
+                            <i class="fas fa-phone-alt"></i>
+                        </span>
+                        <span class="fw-light">
+                            +60 3221241232
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class = "bg-dark py-5">
+        <div class = "container">
+            <div class = "row text-white g-4">
+                <div class = "col-md-6 col-lg-3">
+                    <a class = "text-uppercase text-decoration-none brand text-white" href = "index.html">Introduction</a>
+                    <p class = "text-white text-muted mt-3">Welcome to Utarify Book Store, where a world of knowledge awaits every student!</p>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light">Links</h5>
+                    <ul class = "list-unstyled">
+                        <li class = "my-3">
+                            <a href = "index.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Home
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "rentalterm.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Rental Terms
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "blog.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Blogs
+                            </a>
+                        </li>   
+                        <li class = "my-3">
+                            <a href = "contact.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Follow Us</h5>
+                    <div>
+                        <ul class = "list-unstyled d-flex">
+                            <li>
+                                <a href = "https://www.facebook.com/profile.php?id=61551489320943" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href = "https://www.instagram.com/utarify_books/?igshid=OGQ5ZDc2ODk2ZA%3D%3D" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer -->
+
+
+
+
+    <!-- jquery -->
+    <script src = "js/jquery-3.6.0.js"></script>
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- bootstrap js -->
+    <script src = "bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <!-- custom js -->
+    <script src = "js/script.js"></script>
+    <script  src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="js/email.js"></script>
+    <script>
+            // Function to store contact information in cookies
+            function storeContactInfo() {
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const message = document.getElementById('message').value;
+                
+                // Create an object to store the contact information
+                const contactInfo = {
+                    name: name,
+                    email: email,
+                    phone:phone,
+                    message: message
+                };
+                
+                // Generate a unique cookie name based on the current timestamp
+                const cookieName = `contact_${Date.now()}`;
+
+                // Convert the object to a JSON string
+                const contactInfoJSON = JSON.stringify(contactInfo);
+
+                // Store the JSON string in a cookie named 'contact'
+                document.cookie = `${cookieName}=${contactInfoJSON}`;
+                
+                // Clear the form fields
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('phone').value = '';
+                document.getElementById('message').value = '';
+
+                // Display a message
+                document.getElementById('savedInfo').textContent = 'Contact information saved!';
+
+                // Automatically clear the message after 3 seconds (3000 milliseconds)
+                setTimeout(() => {
+                            document.getElementById('savedInfo').textContent = '';
+                        }, 3000);    
+
+            }
+
+
+            // Event listener for the form submission
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting normally
+                storeContactInfo(); // Call the function to store contact information
+            });
+
+            function checkSavedCookies() {
+            const cookies = document.cookie.split(';');
+            const savedContactCookies = cookies.filter(cookie => cookie.startsWith('contact_'));
+
+                    // process the savedContactCookies array here without displaying them.
+                    console.log(savedContactCookies);
+                }    
+                    
+                // Call the checkSavedCookies function to check saved contact information cookies
+                checkSavedCookies();
+    </script>
+</body>
+</html>

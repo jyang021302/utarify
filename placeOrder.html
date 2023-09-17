@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+        
+    <head>
+        <head>
+            <!-- Required meta tags -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+         
+            <link rel="shortcut icon" href="favicon.ico">
+            <!-- Bootstrap CSS -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+                crossorigin="anonymous">
+        
+            <!-- font awesome(for icons) -->
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+                crossorigin="anonymous">
+        
+            <!-- lato font(from google fonts) -->
+            <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+            <link href="css/custom-style.css" rel="stylesheet">
+            <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+            <title>Books Rental</title>
+            <style>
+                .row {
+                    display: flex; /* Use flexbox to create a row */
+                    align-items: center; /* Vertically center the content */
+                }
+        
+                .jpg {
+                    width: 100px; /* Adjust the width of the image as needed */
+                    height: auto; /* Maintain aspect ratio */
+                    margin-right: 10px; /* Add some space between image and text */
+                }
+
+                #orderContainer {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center; /* Center vertically */
+                    align-items: center; /* Center horizontally */
+                    height: 100vh; /* Use the full viewport height */
+                }
+
+            </style>
+        </head>
+    </head>
+    <body>
+        <div id="orderContainer">
+            <div id="check"><i class="fas fa-check-circle" aria-hidden="true" style="font-size:500px;color:green"></i>
+            </div>
+            
+            <div id="aboutCheck">
+                <h1> Order Placed Successfully! </h1>
+                <p style="text-align: center;"> Thank You. </p>
+            </div>
+            
+        </div>
+    
+        
+    <script>
+        setTimeout(function() {
+            console.log("Hi");
+            location.href = 'index.html'; // Redirect to the second page after 5 seconds
+        }, 5000); // 5000 milliseconds = 5 seconds
+    </script>
+    </body>
+
+</html>
